@@ -2,10 +2,13 @@
 require_once './DbManager.php';
 
 try {
-
+// DBに接続する
     $db = getDb();
+
+// DB接続のコードはパターン化されているので、使いまわしても大丈夫
+// 変にアレンジするとセキュリティの問題が起こるかも
 // $sttという変数名を定義（別にどんな名前でもいい、Statmentの略？）
-    $stt = $db->prepare('INSERT INTO book(isbn, title, price, publish, published) VALUE(:isbn, :title, :price, :publish, :published)');
+    $stt = $db->prepare('INSERT INTO book(isbn, title, price, publish, published) VALUES(:isbn, :title, :price, :publish, :published)');
 
     // 穴あきのSQL文にフォームの文字を入れて完成させていく
     $stt->bindValue(':isbn', $_POST['isbn']);
@@ -15,6 +18,7 @@ try {
     $stt->bindValue(':published', $_POST['published']);
 
     $stt->execute();
+    
     
     header('Location: http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/insert_form.php');
 } catch(PDOException $e) {
