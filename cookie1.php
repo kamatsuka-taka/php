@@ -1,4 +1,4 @@
-<?php require_once '../selfphp/Encode.php'; ?>
+<?php require_once '../self.php/Encode.php'; ?>
 
 <!DOCTYPE html>
 <html>
