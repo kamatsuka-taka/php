@@ -55,10 +55,50 @@
     <input type="radio" name="appearance" value="9" >酸化が進んだ
     <input type="radio" name="appearance" value="10">完全に酸化している
 
+    <div>香り</div>
+    <select name="first impression">第一印象<br />
+        <option hidden>選択してください</option>
+        <option value="1">控えめ</option>
+        <option value="2">しっかりと感じられる</option>
+        <option value="3">力強い</option>
+    </select>
+    <div>特徴</div>
+    <label for="fruit">果実・花・植物</label>
+    <input type="radio" name="fruit" value="1" checked>レモン
+    <input type="radio" name="fruit" value="2">グレープフルーツ
+    <input type="radio" name="fruit" value="3">リンゴ
+    <input type="radio" name="fruit" value="4">洋ナシ
+    <input type="radio" name="fruit" value="5">花梨
+    <input type="radio" name="fruit" value="6">桃
+    <input type="radio" name="fruit" value="7">アプリコット
+    <input type="radio" name="fruit" value="8">パイナップル
+    <input type="radio" name="fruit" value="9">メロン
+    <input type="radio" name="fruit" value="10">パッションフルーツ
+    <input type="radio" name="fruit" value="11">バナナ
+    <input type="radio" name="fruit" value="12">マンゴ
+    <input type="radio" name="fruit" value="13">ライチ
+    <input type="radio" name="fruit" value="14">くるみ
+    <input type="radio" name="fruit" value="15">炒ったアーモンド
+    <input type="radio" name="fruit" value="16">へーぜっるナッツ
+    <input type="radio" name="fruit" value="17">マスカット
+    <input type="radio" name="fruit" value="18">すいかずら
+    <input type="radio" name="fruit" value="19">アカシア
+    <input type="radio" name="fruit" value="20">白バラ
+    <input type="radio" name="fruit" value="21">キンモクセイ
+    <input type="radio" name="fruit" value="22">菩提樹
+    <input type="radio" name="fruit" value="23">ミント
+    <input type="radio" name="fruit" value="24">アニス
+    <input type="radio" name="fruit" value="25">ヴェルヴェーヌ
+    
 
 
+    <div>予算</div>
+    <label for="price">予測金額</label>
+    <input type="number" min="500" max="12000" name="budget">円<br />
 
-
+    <div>統括コメント</div>
+    <label for="total">統括</label>
+    
     </form>
 </body>
 </html>
