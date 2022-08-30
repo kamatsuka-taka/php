@@ -18,7 +18,9 @@ $stt->bindValue(':appearance', $_POST['appearance']);
 $stt->bindValue(':fruit', $_POST['fruit']);
 
 $stt->execute();
+
 header('Location: http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/tasting2.php');
+
 } catch(PDOException $e) {
     die("エラーメッセージ： {$e->getMessage()}");
 }

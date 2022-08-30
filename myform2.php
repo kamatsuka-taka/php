@@ -1,6 +1,6 @@
 <?php
-require_once "./DbManager.php";
-require_once "./selfphp/Encode.php";
+require_once "../DbManager.php";
+require_once "../selfphp/Encode.php";
 
 try {
 // DBに接続する
