@@ -9,14 +9,17 @@ try {
 // DB接続のコードはパターン化されているので、使いまわしても大丈夫
 // 変にアレンジするとセキュリティの問題が起こるかも
 // $sttという変数名を定義（別にどんな名前でもいい、Statmentの略？）
-    $stt = $db->prepare('INSERT INTO memo(name, memo) VALUES(:name,:memo)');
+    $stt = $db->prepare('INSERT INTO talk(name, day, talk) VALUES(:name, :day, :talk)');
 
     // 穴あきのSQL文にフォームの文字を入れて完成させていく
     $stt->bindValue(':name', $_POST['name']);
-    $stt->bindValue(':memo', $_POST['memo']);
+    $stt->bindValue(':day', $_POST['day']);
+    $stt->bindValue(':talk', $_POST['talk']);
     
     $stt->execute();
 
+
+    header('Location: http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/insert_form.php');
 } catch(PDOException $e) {
     die("エラーメッセージ： {$e->getMessage()}");
 }
@@ -30,7 +33,7 @@ try {
     <title>登録</title>
 </head>
 <body>
-<form method="POST" action="myform3.php">
+<form method="POST" action="talk3.php">
 
     <h2>登録しました</h2>
     <input type="submit" value="登録">    
