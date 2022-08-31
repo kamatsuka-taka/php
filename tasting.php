@@ -23,7 +23,7 @@
     </style>
 </head>
 <body>
-    <form method="POST" action="tasting2.php">
+  <form action="tasting2.php" method="post">
     
     <h3>外観</h3>
     <label for="face">清澄度：</label><br />
@@ -40,7 +40,7 @@
     <input type="checkbox" name="shine" value="3">もやがかかった<br />
     </div>
 
-    <label for="color">色調：</label>
+    <label for="color">色調：</label><br />
     <div class="color">
     <input type="checkbox" name="color" value="1" checked>グリーンがかった
     <input type="checkbox" name="color" value="2">レモンイエロー
@@ -51,7 +51,7 @@
     <input type="checkbox" name="color" value="7">アンバー（琥珀色）<br />
     </div>
 
-    <label for="shade">濃淡：</label>
+    <label for="shade">濃淡：</label><br />
     <div class="shade">
     <input type="checkbox" name="shade" value="1" checked>薄い（無色に近い）
     <input type="checkbox" name="shade" value="2">淡い
@@ -60,7 +60,7 @@
     <input type="checkbox" name="shade" value="5">非常に濃い<br />
     </div>
 
-    <label for="viscosity">粘性：</label>
+    <label for="viscosity">粘性：</label><br />
     <div class="viscosity">
     <input type="checkbox" name="viscosity" value="1" checked>さらっとした
     <input type="checkbox" name="viscosity" value="2">やや軽い
@@ -69,7 +69,7 @@
     <input type="checkbox" name="viscosity" value="5">ねっとりした
     </div>
 
-<label for="appearance">外観の印象:</label>
+<label for="appearance">外観の印象:</label><br />
 <div class="appearance">
     <input type="checkbox" name="appearance" value="1" checked>若い
     <input type="checkbox" name="appearance" value="2">軽い
@@ -84,15 +84,15 @@
 </div>
 
     <h3>香り</h3>
-    <label for="impression">第一印象:</label>
-    <select name="first impression">第一印象<br />
+    <!-- <label for="impression">第一印象:</label>
+    <select name="impression">第一印象<br />
         <option hidden>選択してください</option>
         <option value="1">控えめ</option>
         <option value="2">しっかりと感じられる</option>
         <option value="3">力強い</option>
-    </select>
+    </select> -->
     <h3>特徴</h3>
-    <label for="fruit">果実・花・植物：</label>
+    <label for="fruit">果実・花・植物：</label><br />
     <div class="fruit">
     <input type="checkbox" name="fruit" value="1" checked>レモン
     <input type="checkbox" name="fruit" value="2">グレープフルーツ
@@ -123,11 +123,11 @@
 
 
     <h3>予算</h3>
-    <label for="price">予測金額</label>
-    <input type="number" min="500" max="12000" name="budget">円<br />
+    <label for="price">予測金額:</label><br />
+    <input type="number" min="500" max="12000" name="price">円<br />
 
     <h3>評価</h3>
-    <label for="total">総合評価:</label><br />
+    <label for="comment">総合評価:</label><br />
     <textarea name="comment" cols="70" rows="6" maxlength="320"></textarea><br />
 
     <input type="submit" value="送信"> 

@@ -9,7 +9,7 @@
 <body>
     <form action="insert_process.php" method="post">
         <div>
-            <label for="isbn">ISBNコード：</label><br/>
+            <label for="isbn">ISBNコード:</label><br/>
             <input id="isbn" type="text" name="isbn" size="25" maxlength="20" />
             </div>
         <div>
