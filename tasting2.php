@@ -25,7 +25,12 @@ $stt->bindValue(':comment', $_POST['comment']);
 
 $stt->execute();
 
+<<<<<<< HEAD
 //    header('Location: http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/insert_form.php');
+=======
+header('Location: http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/tasting2.php');
+
+>>>>>>> 3d8547869e9df176ca8c07de980b73f105ecd01d
 } catch(PDOException $e) {
     die("エラーメッセージ： {$e->getMessage()}");
 }

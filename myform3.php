@@ -1,8 +1,8 @@
 <?php
 
 // ファイルの場所が教科書と違うかも
-require_once '../selfphp/Encode.php';    //e関数の有効化
-require_once '../DbManager.php';         //getDb関数の有効化
+require_once './selfphp/Encode.php';    //e関数の有効化
+require_once './DbManager.php';         //getDb関数の有効化
 ?>
 <!DOCTYPE html>
 <html lang="ja">

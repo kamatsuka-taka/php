@@ -14,7 +14,7 @@ try {
     // 穴あきのSQL文にフォームの文字を入れて完成させていく
     $stt->bindValue(':name', $_POST['name']);
     $stt->bindValue(':memo', $_POST['memo']);
-    
+
     $stt->execute();
 
 } catch(PDOException $e) {
