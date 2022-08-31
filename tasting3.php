@@ -34,7 +34,7 @@ require_once './DbManager.php';
         try {
             $db = getDb();
 
-            $stt = $db->prepare('SELECT * FROM wine ORDER BY wine ASC');
+            $stt = $db->prepare('SELECT * FROM wine ORDER BY comment ASC');
             $stt->execute();
 
             while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
