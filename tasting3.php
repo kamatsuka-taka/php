@@ -17,7 +17,7 @@ require_once './DbManager.php';
     <tbody class="table">
         <thead>
             <tr>
-                <!-- <th>id</th> -->
+                <th>id</th>
                 <th>face</th>
                 <th>shine</th>
                 <th>color</th>
@@ -34,13 +34,13 @@ require_once './DbManager.php';
         try {
             $db = getDb();
 
-            $stt = $db->prepare('SELECT * FROM wine ORDER BR wine ASC');
+            $stt = $db->prepare('SELECT * FROM wine ORDER BY wine ASC');
             $stt->execute();
 
             while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
                 ?>
                 <tr>
-                <!-- <td><?=e($row['id']) ?></td> -->
+                <td><?=e($row['id']) ?></td>
                 <td><?=e($row['face']) ?></td>
                 <td><?=e($row['shine']) ?></td>
                 <td><?=e($row['color']) ?></td>
